@@ -1,0 +1,43 @@
+.logo {
+    display: flex;
+    max-width: 80px;
+
+    figure {
+        height: 60px;
+        width: 60px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    div {
+        display: none;
+    }
+
+    @media(min-width: 768px) {
+        max-width: 200px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            h1 {
+                font-size: var(--title-2);
+                font-weight: 500;
+                font-family: var(--font-tercery);
+                color: var(--grey-200);
+            }
+
+            p {
+                font-family: var(--font-secundary);
+                color: var(--tercery-color);
+                font-size: var(--body-2);
+            }
+        }
+
+    }
+}

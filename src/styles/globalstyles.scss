@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+
+:root {
+    --primary-color: #603f0d;
+    --secondary-color: #cfa757;
+    --tercery-color: #cb913a;
+    --background-color: #f8f6ee;
+  
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+
+    --grey-100: #ffffff;
+    --grey-200: #fafaf8;
+    --grey-300: #d6d6d6;
+    --grey-400: #bfbfbf;
+    --grey-500: #a6a6a6;
+    --grey-600: #8c8c8c;
+    --grey-700: #737373;
+    --grey-800: #595959;
+    --grey-900: #090805;
+  
+    --font-primary: 'Parisienne', cursive;
+    --font-secundary: 'Montserrat', sans-serif;
+    --font-tercery: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+  
+    --title-1: 2rem;
+    --title-2: 1.5rem;
+    --title-3: 1.25rem;
+    --body-1: 1rem;
+    --body-2: 0.875rem;
+    --caption: 0.75rem;
+  
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+

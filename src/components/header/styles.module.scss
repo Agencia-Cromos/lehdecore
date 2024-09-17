@@ -1,0 +1,121 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  height: 90px;
+  padding-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+  }
+
+  .menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color, #fff);
+    transition: transform 0.3s ease;
+    z-index: 1002;
+  }
+
+  .menu {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: var(--text-color, #fff);
+          text-decoration: none;
+          font-size: var(--body-2);
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: var(--secondary-color);
+            scale: 1.1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    .container {
+      position: relative;
+    }
+
+    .menuToggle {
+      display: block;
+
+      &.open {
+        transform: translateX(-250px);
+      }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: var(--primary-color);
+      padding: 90px 20px 20px;
+      transition: right 0.3s ease;
+      box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+
+      &.open {
+        right: 0;
+      }
+
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-left: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

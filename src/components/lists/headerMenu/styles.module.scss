@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li{
+        display: flex;
+        align-items: center;
+        gap: 5px
+    }
+    
+    @media(min-width: 7680px){
+        flex-direction: row;
+        
+    }
+}

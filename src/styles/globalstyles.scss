@@ -1,113 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
 
-
 :root {
-    --primary-color: #603f0d;
-    --secondary-color: #cfa757;
-    --tercery-color: #cb913a;
-    --background-color: #f8f6ee;
-  
-    --success-color: #28a745;
-    --error-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #17a2b8;
+  --primary-color: #603f0d;
+  --secondary-color: #cfa757;
+  --tercery-color: #cb913a;
+  --background-color: #f8f6ee;
 
-    --grey-100: #ffffff;
-    --grey-200: #fafaf8;
-    --grey-300: #d6d6d6;
-    --grey-400: #bfbfbf;
-    --grey-500: #a6a6a6;
-    --grey-600: #8c8c8c;
-    --grey-700: #737373;
-    --grey-800: #595959;
-    --grey-900: #090805;
-  
-    --font-primary: 'Parisienne', cursive;
-    --font-secundary: 'Montserrat', sans-serif;
-    --font-tercery: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-  
-    --title-1: 2rem;
-    --title-2: 1.5rem;
-    --title-3: 1.25rem;
-    --body-1: 1rem;
-    --body-2: 0.875rem;
-    --caption: 0.75rem;
-  
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.75;
+  --grey-100: #ffffff;
+  --grey-800: #595959;
+  --grey-900: #090805;
+
+  --font-secundary: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --title-1: 2rem;
+  --title-2: 1.5rem;
+  --body-1: 1rem;
+
+  --line-height-relaxed: 1.75;
+
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    height: 100%;
-    line-height: 1;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-body);
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-ol, ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  height: 100%;
+  font-family: var(--font-body);
+  background-color: var(--background-color);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-input, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-}
+.devPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--background-color);
 
-blockquote, q {
-    quotes: none;
-}
+  .box {
+    background-color: var(--grey-100);
+    border-radius: 10px;
+    padding: clamp(20px, 5%, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
 
-blockquote::before, blockquote::after,
-q::before, q::after {
-    content: '';
-    content: none;
-}
+    figure {
+      width: clamp(120px, 25%, 200px);
+      height: clamp(120px, 25%, 200px);
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: normal;
-}
+      img {
+        width: 80%;  // A imagem é 80% do tamanho do figure
+        height: 80%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
 
+    h1 {
+      font-size: clamp(1.5rem, 2.5vw, var(--title-1));
+      font-family: var(--font-secundary);
+      font-weight: 800;
+      color: var(--grey-900);
+    }
+
+    p {
+      font-size: clamp(0.875rem, 2vw, var(--body-1));
+      line-height: 1,25;
+      color: var(--grey-800);
+    }
+
+    a{
+      text-decoration: none;
+      color: var(--background-color);
+      background-color: var(--primary-color);
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 10px;
+
+
+      span{
+        font-weight: 500;
+      }
+
+      &:hover{
+        scale: 1.1;
+      }
+    }
+  }
+}

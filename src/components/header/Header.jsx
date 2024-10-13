@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { HeaderMenu } from '../lists/headerMenu/HeaderMenu';
 import styles from './styles.module.scss';
-import { Logo } from '@/assets/fragments/logo/Logo';
+import { Logo } from '@/fragments/logo/Logo';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Container } from '@/fragments/container/Container';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Header() {
     return (
         <>
             <header className={styles.header}>
-                <div className={styles.container}>
+                <Container>
                     <Logo />
                     <button 
                         className={`${styles.menuToggle} ${isMenuOpen ? styles.open : ''}`} 
@@ -35,7 +36,7 @@ export default function Header() {
                     <nav className={`${styles.menu} ${isMenuOpen ? styles.open : ''}`}>
                         <HeaderMenu />
                     </nav>
-                </div>
+                </Container>
             </header>
             {isMenuOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
         </>
